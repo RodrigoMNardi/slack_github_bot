@@ -12,10 +12,9 @@
 # frozen_string_literal: true
 #
 
-#
-#  SPDX-License-Identifier: BSD-2-Clause
-#
-#  Startup script for CI Slack Bot
+source "$HOME/.rvm/scripts/rvm"
+rvm use 3.3.1
+bundle install
 
 echo ">> Running server"
 rackup -o 0.0.0.0 -p 4681 config.ru
